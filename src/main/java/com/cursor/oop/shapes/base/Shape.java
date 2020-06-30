@@ -5,7 +5,7 @@ import com.cursor.oop.vertex.Vertex;
 import java.util.List;
 
 public  class Shape {
-    private final List<Vertex> vertex;
+    protected final List<Vertex> vertex;
     private final String name;
 
     public Shape(List<Vertex> vertex, String name) {
