@@ -1,25 +1,30 @@
 package com.cursor.oop.vertex;
 
 public class Vertex2D extends Vertex {
-
-    private final double x;
-    private final double y;
-
     public Vertex2D(double x, double y) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
     }
 
+    public Vertex2D(double x, double y, double z) {
+        super(x, y, z);
+    }
+
+    @Override
     public double getX() {
-        return x;
+        return super.getX();
     }
 
-
+    @Override
     public double getY() {
-        return y;
+        return super.getY();
     }
 
-    public double getDistance(Vertex2D a,Vertex2D b) {
+    @Override
+    public double getZ() {
+        return super.getZ();
+    }
+
+    public double getDistance(Vertex2D a, Vertex2D b) {
         return Math.sqrt(Math.pow(a.getX() - b.getX(), 2)
                 + Math.pow(a.getY() - b.getY(), 2));
     }

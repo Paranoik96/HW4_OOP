@@ -6,12 +6,10 @@ import com.cursor.oop.vertex.Vertex3D;
 import java.util.List;
 
 public class Sphere extends SpaceShape {
-    private final Vertex3D vertex3D;
     private final double radius;
 
     public Sphere(Vertex3D vertex3D, double radius) {
         super(List.of(vertex3D), "Sphere");
-        this.vertex3D = vertex3D;
         this.radius = radius;
     }
 
@@ -27,7 +25,7 @@ public class Sphere extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Sphere: " + "\n" + vertex3D + "\n" +
+        return "Sphere: " + "\n" +
                 "radius = " + radius + "\n" +
                 "Area : " + getArea() + "\n" +
                 "Volume: " + getVolume() + "\n";

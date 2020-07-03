@@ -2,26 +2,27 @@ package com.cursor.oop.vertex;
 
 public class Vertex3D extends Vertex{
 
-    private final double x;
-    private final double y;
-    private final double z;
-
     public Vertex3D(double x, double y, double z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        super(x,y,z);
     }
 
+    public Vertex3D(double x, double y) {
+        super(x, y);
+    }
+
+    @Override
     public double getX() {
-        return x;
+        return super.getX();
     }
 
+    @Override
     public double getY() {
-        return y;
+        return super.getY();
     }
 
+    @Override
     public double getZ() {
-        return z;
+        return super.getZ();
     }
 
     public double getDistance(Vertex3D a, Vertex3D b, Vertex3D c) {
@@ -33,8 +34,8 @@ public class Vertex3D extends Vertex{
     @Override
     public String toString() {
         return "Vertices in 3D is : " +
-                "x=" + x +
-                ", y=" + y +
-                ", z=" + z ;
+                "x=" + getX() +
+                ", y=" + getY() +
+                ", z=" + getZ() ;
     }
 }

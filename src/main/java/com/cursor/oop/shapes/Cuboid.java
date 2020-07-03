@@ -8,14 +8,12 @@ import java.util.List;
 
 public class Cuboid extends SpaceShape {
 
-    private final Vertex3D vertex3D;
     private final int width;
     private final int height;
     private final int depth;
 
     public Cuboid(Vertex3D vertex3D, int width, int height, int depth) {
         super(List.of(vertex3D), "Cuboid");
-        this.vertex3D = vertex3D;
         this.width = width;
         this.height = height;
         this.depth = depth;
@@ -33,7 +31,7 @@ public class Cuboid extends SpaceShape {
 
     @Override
     public String toString() {
-        return "Cuboid: " + "\n" + vertex3D + "\n" +
+        return "Cuboid: " + "\n" +
                 "width=" + width + "\n" +
                 "height=" + height + "\n" +
                 "depth=" + depth + "\n" +

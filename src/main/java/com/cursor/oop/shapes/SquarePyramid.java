@@ -7,13 +7,11 @@ import java.util.List;
 
 public class SquarePyramid extends SpaceShape {
 
-    private final Vertex3D vertex3D;
     private final int baseWidth;
     private final int height;
 
     public SquarePyramid(Vertex3D vertex3D, int baseWidth, int height) {
         super(List.of(vertex3D), "SquarePyramid");
-        this.vertex3D = vertex3D;
         this.baseWidth = baseWidth;
         this.height = height;
     }
@@ -33,7 +31,7 @@ public class SquarePyramid extends SpaceShape {
 
     @Override
     public String toString() {
-        return "SquarePyramid: " + "\n" + vertex3D + "\n" +
+        return "SquarePyramid: " + "\n" +
                 "baseWidth=" + baseWidth + "\n" +
                 "height=" + height + "\n" +
                 "Area : " + getArea() + "\n" +

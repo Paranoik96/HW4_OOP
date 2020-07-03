@@ -7,12 +7,10 @@ import java.util.List;
 
 public class Circle extends PlaneShape {
 
-    private final Vertex2D vertex2D;
     private final double radius;
 
     public Circle(Vertex2D vertex2D, double radius) {
         super(List.of(vertex2D), "Circle");
-        this.vertex2D = vertex2D;
         this.radius = radius;
     }
 
@@ -26,10 +24,9 @@ public class Circle extends PlaneShape {
         return 2 * Math.PI * radius;
     }
 
-
     @Override
     public String toString() {
-        return "Circle: " + "\n" +vertex2D +
+        return "Circle: " + "\n" +
                 "radius= " + radius + "\n"
                 + "Area : " + getArea() + "\n"
                 + "Perimeter : " + getPerimeter()+"\n";
