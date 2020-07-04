@@ -1,13 +1,12 @@
 package com.cursor.oop.vertex;
 
-public class Vertex3D extends Vertex{
+public class Vertex3D extends Vertex2D{
+
+    private final double z;
 
     public Vertex3D(double x, double y, double z) {
-        super(x,y,z);
-    }
-
-    public Vertex3D(double x, double y) {
-        super(x, y);
+       super(x,y);
+        this.z = z;
     }
 
     @Override
@@ -20,9 +19,8 @@ public class Vertex3D extends Vertex{
         return super.getY();
     }
 
-    @Override
     public double getZ() {
-        return super.getZ();
+        return z;
     }
 
     public double getDistance(Vertex3D a, Vertex3D b, Vertex3D c) {
